@@ -294,7 +294,7 @@ def train_worker(args, device) -> str:
 
     # PT2.0+
     if args.use_torch_compile:
-        model = torch.compile(model)
+        model = torch.compile(model, backend="eager")
 
     model = model.to(device)
 

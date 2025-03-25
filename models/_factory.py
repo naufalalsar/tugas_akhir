@@ -97,7 +97,6 @@ def load_checkpoint(
     """Load checkpoint."""
     checkpoint = torch.load(save_path, map_location=device)
     
-    
     if "model_dict" not in checkpoint:
         checkpoint = {"model_dict":checkpoint}
 

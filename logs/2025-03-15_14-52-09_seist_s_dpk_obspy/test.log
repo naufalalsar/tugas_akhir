@@ -1,0 +1,10 @@
+2025-03-15 14:52:09,921:test:WARNING:[test]Augmentation -> False
+2025-03-15 14:52:09,921:test:INFO:Registering ObsPy dataset...
+2025-03-15 14:52:11,039:test:INFO:Fetching earthquake events from 2018-01-01T00:00:00.000000Z to 2018-01-02T00:00:00.000000Z...
+2025-03-15 14:52:12,323:test:INFO:Fetching earthquake events from 2018-01-01T00:00:00.000000Z to 2018-01-02T00:00:00.000000Z...
+2025-03-15 14:52:13,933:test:INFO:Model loaded: C:\Users\Intel X Nvidia\Desktop\TA\SeisT\pretrained\seist_s_dpk_diting.pth
+2025-03-15 14:52:13,985:test:INFO:model.load_state_dict
+2025-03-15 14:52:13,986:test:INFO:Model parameters: 125717
+2025-03-15 14:55:42,268:test:INFO:Test: [0/200][0/5]seist_s_dpk_test  [DET]precision 0.0000 (0.0000)  [DET]recall 0.0000 (0.0000)  [DET]f1 0.0000 (0.0000)  [PPK]precision 0.0000 (0.0000)  [PPK]recall 0.0000 (0.0000)  [PPK]f1 0.0000 (0.0000)  [PPK]mean 0.0000 (0.0000)  [PPK]std 0.0000 (0.0000)  [PPK]mae 0.0000 (0.0000)  [PPK]mape 0.0000 (0.0000)  [SPK]precision 0.0000 (0.0000)  [SPK]recall 0.0000 (0.0000)  [SPK]f1 0.0000 (0.0000)  [SPK]mean 0.0000 (0.0000)  [SPK]std 0.0000 (0.0000)  [SPK]mae 0.0000 (0.0000)  [SPK]mape 0.0000 (0.0000)  Loss 0.0266 (0.0266)
+2025-03-15 14:55:45,680:test:INFO:Test: [0/200][4/5]seist_s_dpk_test  [DET]precision 0.0000 (0.0000)  [DET]recall 0.0000 (0.0000)  [DET]f1 0.0000 (0.0000)  [PPK]precision 0.0000 (0.0000)  [PPK]recall 0.0000 (0.0000)  [PPK]f1 0.0000 (0.0000)  [PPK]mean 0.0000 (0.0000)  [PPK]std 0.0000 (0.0000)  [PPK]mae 0.0000 (0.0000)  [PPK]mape 0.0000 (0.0000)  [SPK]precision 0.0000 (0.0000)  [SPK]recall 0.0000 (0.0000)  [SPK]f1 0.0000 (0.0000)  [SPK]mean 0.0000 (0.0000)  [SPK]std 0.0000 (0.0000)  [SPK]mae 0.0000 (0.0000)  [SPK]mape 0.0000 (0.0000)  Loss 0.0185 (0.0205)
+2025-03-15 14:55:47,055:test:INFO:* [DET]PRECISION 0.0000  RECALL 0.0000  F1 0.0000 [PPK]PRECISION 0.0000  RECALL 0.0000  F1 0.0000  MEAN 0.0000  STD 0.0000  MAE 0.0000  MAPE 0.0000 [SPK]PRECISION 0.0000  RECALL 0.0000  F1 0.0000  MEAN 0.0000  STD 0.0000  MAE 0.0000  MAPE 0.0000 

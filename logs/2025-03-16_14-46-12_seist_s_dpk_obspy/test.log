@@ -1,0 +1,5 @@
+2025-03-16 14:46:12,296:test:WARNING:[test]Augmentation -> False
+2025-03-16 14:46:12,296:test:INFO:Registering ObsPy dataset...
+2025-03-16 14:46:12,458:test:INFO:Model loaded: C:\Users\Intel X Nvidia\Desktop\TA\SeisT\pretrained\seist_s_dpk_diting.pth
+2025-03-16 14:46:12,511:test:INFO:model.load_state_dict
+2025-03-16 14:46:12,513:test:INFO:Model parameters: 125717

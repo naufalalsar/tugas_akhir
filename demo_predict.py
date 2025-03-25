@@ -25,13 +25,11 @@ def normalize(data: np.ndarray, mode: str):
 
 def load_data(
     data_path: str = "/root/data/Datasets/Diting50hz/DiTing330km_part_0.hdf5",
-    trace_name: str = "000014.0100",
-):
+    trace_name: str = "000014.0100",):
     # Read HDF5
     with h5py.File(data_path, "r") as f:
         data = f.get(f"earthquake/{trace_name}")
         data = np.array(data).astype(np.float32).T
-
     return data
 
 
@@ -72,6 +70,7 @@ if __name__ == "__main__":
         data_path="/root/data/Datasets/Diting50hz/DiTing330km_part_0.hdf5",
         trace_name="000159.0004",
     )
+    
     waveform_ndarray = waveform_ndarray[:, :8192]
     waveform_ndarray = normalize(waveform_ndarray, mode="std")
     waveform_tensor = torch.from_numpy(waveform_ndarray).reshape(1, 3, -1).to(device)
@@ -80,7 +79,6 @@ if __name__ == "__main__":
     # Step.3 - Inference
     preds_tensor = model(waveform_tensor)
     preds_ndarray = preds_tensor.detach().cpu().numpy().reshape(3, -1)
-
 
     # Step.4 - Visualization 
     vis_phase_picking(

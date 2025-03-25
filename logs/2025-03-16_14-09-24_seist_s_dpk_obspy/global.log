@@ -1,0 +1,75 @@
+2025-03-16 14:09:24,812:global:INFO:device: cuda:0
+2025-03-16 14:09:24,812:global:INFO:pid: 59696
+2025-03-16 14:09:24,812:global:INFO:
+
+Arguments:
+mode: test
+model_name: seist_s_dpk
+checkpoint: C:\Users\Intel X Nvidia\Desktop\TA\SeisT\pretrained\seist_s_dpk_diting.pth
+use_torch_compile: True
+seed: 0
+log_base: C:\Users\Intel X Nvidia\Desktop\TA\SeisT\logs
+log_step: 4
+use_tensorboard: True
+save_test_results: True
+find_unused_parameters: False
+device: cuda:0
+data: C:\Users\Intel X Nvidia\Desktop\TA\SeisT\datasets
+dataset_name: obspy
+data_split: True
+train_size: 0.8
+val_size: 0.1
+shuffle: True
+workers: 8
+pin_memory: True
+in_samples: 8192
+label_width: 0.5
+label_shape: gaussian
+coda_ratio: 2.0
+norm_mode: std
+min_snr: -inf
+p_position_ratio: -1
+augmentation: True
+add_event_rate: 0.0
+max_event_num: 1
+shift_event_rate: 0.2
+add_noise_rate: 0.4
+add_gap_rate: 0.4
+min_event_gap: 0.5
+drop_channel_rate: 0.4
+scale_amplitude_rate: 0.4
+pre_emphasis_rate: 0.4
+pre_emphasis_ratio: 0.97
+generate_noise_rate: 0.05
+mask_percent: 0
+noise_percent: 0
+epochs: 200
+patience: 30
+steps: 0
+start_epoch: 0
+batch_size: 1
+optim: Adam
+momentum: 0.9
+weight_decay: 0.0
+use_lr_scheduler: True
+lr_scheduler_mode: exp_range
+base_lr: 8e-05
+max_lr: 0.001
+warmup_steps: 2000
+down_steps: 3000
+time_threshold: 0.1
+min_peak_dist: 1.0
+ppk_threshold: 0.3
+spk_threshold: 0.3
+det_threshold: 0.5
+max_detect_event_num: 1
+distributed: False
+
+Configs:
+_model_conf_keys: ('loss', 'labels', 'eval', 'outputs_transform_for_loss', 'outputs_transform_for_results')
+models: {'phasenet': {'loss': functools.partial(<class 'models.loss.CELoss'>, weight=[[1], [1], [1]]), 'inputs': [['z', 'n', 'e']], 'labels': [['non', 'ppk', 'spk']], 'eval': ['ppk', 'spk'], 'targets_transform_for_loss': None, 'outputs_transform_for_loss': None, 'outputs_transform_for_results': None}, 'eqtransformer': {'loss': functools.partial(<class 'models.loss.BCELoss'>, weight=[[0.5], [1], [1]]), 'inputs': [['z', 'n', 'e']], 'labels': [['det', 'ppk', 'spk']], 'eval': ['det', 'ppk', 'spk'], 'targets_transform_for_loss': None, 'outputs_transform_for_loss': None, 'outputs_transform_for_results': None}, 'magnet': {'loss': <class 'models.loss.MousaviLoss'>, 'inputs': [['z', 'n', 'e']], 'labels': ['emg'], 'eval': ['emg'], 'targets_transform_for_loss': None, 'outputs_transform_for_loss': None, 'outputs_transform_for_results': <function Config.<lambda> at 0x0000018DC440E700>}, 'baz_network': {'loss': functools.partial(<class 'models.loss.CombinationLoss'>, losses=[<class 'models.loss.MSELoss'>, <class 'models.loss.MSELoss'>]), 'inputs': [['z', 'n', 'e']], 'labels': ['baz'], 'eval': ['baz'], 'targets_transform_for_loss': <function Config.<lambda> at 0x0000018DC440E820>, 'outputs_transform_for_loss': None, 'outputs_transform_for_results': <function Config.<lambda> at 0x0000018DC9534820>}, 'ditingmotion': {'loss': functools.partial(<class 'models.loss.CombinationLoss'>, losses=[<class 'models.loss.FocalLoss'>, <class 'models.loss.FocalLoss'>]), 'inputs': [['z', 'dz']], 'labels': ['clr', 'pmp'], 'eval': ['pmp'], 'targets_transform_for_loss': None, 'outputs_transform_for_loss': None, 'outputs_transform_for_results': <function Config.<lambda> at 0x0000018DC9539160>}, 'seist_.*?_dpk.*': {'loss': functools.partial(<class 'models.loss.BCELoss'>, weight=[[0.5], [1], [1]]), 'inputs': [['z', 'n', 'e']], 'labels': [['det', 'ppk', 'spk']], 'eval': ['det', 'ppk', 'spk'], 'targets_transform_for_loss': None, 'outputs_transform_for_loss': None, 'outputs_transform_for_results': None}, 'seist_.*?_pmp': {'loss': functools.partial(<class 'models.loss.CELoss'>, weight=[1, 1]), 'inputs': [['z', 'n', 'e']], 'labels': ['pmp'], 'eval': ['pmp'], 'targets_transform_for_loss': None, 'outputs_transform_for_loss': None, 'outputs_transform_for_results': None}, 'seist_.*?_emg': {'loss': <class 'torch.nn.modules.loss.HuberLoss'>, 'inputs': [['z', 'n', 'e']], 'labels': ['emg'], 'eval': ['emg'], 'targets_transform_for_loss': None, 'outputs_transform_for_loss': None, 'outputs_transform_for_results': None}, 'seist_.*?_baz': {'loss': <class 'torch.nn.modules.loss.HuberLoss'>, 'inputs': [['z', 'n', 'e']], 'labels': ['baz'], 'eval': ['baz'], 'targets_transform_for_loss': None, 'outputs_transform_for_loss': None, 'outputs_transform_for_results': None}, 'seist_.*?_dis': {'loss': <class 'torch.nn.modules.loss.HuberLoss'>, 'inputs': [['z', 'n', 'e']], 'labels': ['dis'], 'eval': ['dis'], 'targets_transform_for_loss': None, 'outputs_transform_for_loss': None, 'outputs_transform_for_results': None}}
+_avl_metrics: ('precision', 'recall', 'f1', 'mean', 'std', 'mae', 'mape', 'r2')
+_avl_io_item_types: ('soft', 'value', 'onehot')
+_avl_io_items: {'z': {'type': 'soft', 'metrics': ['mean', 'std', 'mae']}, 'n': {'type': 'soft', 'metrics': ['mean', 'std', 'mae']}, 'e': {'type': 'soft', 'metrics': ['mean', 'std', 'mae']}, 'dz': {'type': 'soft', 'metrics': ['mean', 'std', 'mae']}, 'dn': {'type': 'soft', 'metrics': ['mean', 'std', 'mae']}, 'de': {'type': 'soft', 'metrics': ['mean', 'std', 'mae']}, 'non': {'type': 'soft', 'metrics': []}, 'det': {'type': 'soft', 'metrics': ['precision', 'recall', 'f1']}, 'ppk': {'type': 'soft', 'metrics': ['precision', 'recall', 'f1', 'mean', 'std', 'mae', 'mape']}, 'spk': {'type': 'soft', 'metrics': ['precision', 'recall', 'f1', 'mean', 'std', 'mae', 'mape']}, 'ppk+': {'type': 'soft', 'metrics': []}, 'spk+': {'type': 'soft', 'metrics': []}, 'det+': {'type': 'soft', 'metrics': []}, 'ppks': {'type': 'value', 'metrics': ['mean', 'std', 'mae', 'mape', 'r2']}, 'spks': {'type': 'value', 'metrics': ['mean', 'std', 'mae', 'mape', 'r2']}, 'emg': {'type': 'value', 'metrics': ['mean', 'std', 'mae', 'r2']}, 'smg': {'type': 'value', 'metrics': ['mean', 'std', 'mae', 'r2']}, 'baz': {'type': 'value', 'metrics': ['mean', 'std', 'mae', 'r2']}, 'dis': {'type': 'value', 'metrics': ['mean', 'std', 'mae', 'r2']}, 'pmp': {'type': 'onehot', 'metrics': ['precision', 'recall', 'f1'], 'num_classes': 2}, 'clr': {'type': 'onehot', 'metrics': ['precision', 'recall', 'f1'], 'num_classes': 2}}
+_type_to_ioitems: defaultdict(<class 'list'>, {'soft': ['z', 'n', 'e', 'dz', 'dn', 'de', 'non', 'det', 'ppk', 'spk', 'ppk+', 'spk+', 'det+'], 'value': ['ppks', 'spks', 'emg', 'smg', 'baz', 'dis'], 'onehot': ['pmp', 'clr']})
+

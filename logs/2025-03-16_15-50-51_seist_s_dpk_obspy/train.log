@@ -1,0 +1,9 @@
+2025-03-16 15:50:51,578:train:INFO:Registering ObsPy dataset...
+2025-03-16 15:50:51,585:train:WARNING:Data augmentation: Dataset size -> 200
+2025-03-16 15:50:51,585:train:WARNING:[val]Augmentation -> False
+2025-03-16 15:50:51,585:train:INFO:Registering ObsPy dataset...
+2025-03-16 15:50:51,589:train:INFO:train size: 200, val size:100
+2025-03-16 15:50:51,589:train:WARNING:`args.epochs` -> 200, `args.steps` -> 40000
+2025-03-16 15:50:51,740:train:INFO:Model loaded: C:\Users\Intel X Nvidia\Desktop\TA\SeisT\pretrained\seist_s_dpk_diting.pth
+2025-03-16 15:50:51,790:train:INFO:model.load_state_dict
+2025-03-16 15:50:51,805:train:INFO:Model parameters: 125717

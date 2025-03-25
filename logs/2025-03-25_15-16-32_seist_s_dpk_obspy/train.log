@@ -1,0 +1,17 @@
+2025-03-25 15:16:32,552:train:INFO:Registering ObsPy dataset with HDF5 support...
+2025-03-25 15:16:32,556:train:WARNING:Data augmentation: Dataset size -> 200
+2025-03-25 15:16:32,556:train:WARNING:[val]Augmentation -> False
+2025-03-25 15:16:32,556:train:INFO:Registering ObsPy dataset with HDF5 support...
+2025-03-25 15:16:32,559:train:INFO:train size: 200, val size:100
+2025-03-25 15:16:32,559:train:WARNING:`args.epochs` -> 10, `args.steps` -> 10
+2025-03-25 15:16:32,701:train:INFO:Model loaded: C:\Users\Intel X Nvidia\Desktop\TA\SeisT\pretrained\seist_s_dpk_diting.pth
+2025-03-25 15:16:32,743:train:INFO:model.load_state_dict
+2025-03-25 15:16:32,747:train:INFO:Model parameters: 125717
+2025-03-25 15:16:47,077:train:INFO:Train: [0/10][0/1]seist_s_dpk_train  [DET]precision 0.0000 (0.0000)  [DET]recall 0.0000 (0.0000)  [DET]f1 0.0000 (0.0000)  [PPK]precision 0.0000 (0.0000)  [PPK]recall 0.0000 (0.0000)  [PPK]f1 0.0000 (0.0000)  [PPK]mean 0.0000 (0.0000)  [PPK]std 0.0000 (0.0000)  [PPK]mae 0.0000 (0.0000)  [PPK]mape 0.0000 (0.0000)  [SPK]precision 0.0000 (0.0000)  [SPK]recall 0.0000 (0.0000)  [SPK]f1 0.0000 (0.0000)  [SPK]mean 0.0000 (0.0000)  [SPK]std 0.0000 (0.0000)  [SPK]mae 0.0000 (0.0000)  [SPK]mape 0.0000 (0.0000)  Loss 0.1061 (0.1061)
+2025-03-25 15:17:01,819:train:INFO:Val: [0/10][0/1]seist_s_dpk_val  [DET]precision 0.0000 (0.0000)  [DET]recall 0.0000 (0.0000)  [DET]f1 0.0000 (0.0000)  [PPK]precision 0.0000 (0.0000)  [PPK]recall 0.0000 (0.0000)  [PPK]f1 0.0000 (0.0000)  [PPK]mean 0.0000 (0.0000)  [PPK]std 0.0000 (0.0000)  [PPK]mae 0.0000 (0.0000)  [PPK]mape 0.0000 (0.0000)  [SPK]precision 0.0000 (0.0000)  [SPK]recall 0.0000 (0.0000)  [SPK]f1 0.0000 (0.0000)  [SPK]mean 0.0000 (0.0000)  [SPK]std 0.0000 (0.0000)  [SPK]mae 0.0000 (0.0000)  [SPK]mape 0.0000 (0.0000)  Loss 0.0143 (0.0143)
+2025-03-25 15:17:03,483:train:INFO:Model saved: C:\Users\Intel X Nvidia\Desktop\TA\SeisT\logs\2025-03-25_15-16-32_seist_s_dpk_obspy\checkpoints\model-0.pth
+2025-03-25 15:17:03,672:train:INFO:* [Train Metrics][DET]PRECISION 0.0000  RECALL 0.0000  F1 0.0000 [PPK]PRECISION 0.0000  RECALL 0.0000  F1 0.0000  MEAN 0.0000  STD 0.0000  MAE 0.0000  MAPE 0.0000 [SPK]PRECISION 0.0000  RECALL 0.0000  F1 0.0000  MEAN 0.0000  STD 0.0000  MAE 0.0000  MAPE 0.0000 
+2025-03-25 15:17:03,672:train:INFO:* [Val Metrics][DET]PRECISION 0.0000  RECALL 0.0000  F1 0.0000 [PPK]PRECISION 0.0000  RECALL 0.0000  F1 0.0000  MEAN 0.0000  STD 0.0000  MAE 0.0000  MAPE 0.0000 [SPK]PRECISION 0.0000  RECALL 0.0000  F1 0.0000  MEAN 0.0000  STD 0.0000  MAE 0.0000  MAPE 0.0000 
+2025-03-25 15:17:03,672:train:INFO:* Epoch cost time: 0h 0min 30s
+2025-03-25 15:17:03,672:train:INFO:* Estimated end time: 2025-03-25 15:21:41
+

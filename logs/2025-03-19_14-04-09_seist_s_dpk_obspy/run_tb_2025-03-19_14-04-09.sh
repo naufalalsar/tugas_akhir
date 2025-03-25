@@ -1,0 +1,1 @@
+tensorboard --logdir 'C:\Users\Intel X Nvidia\Desktop\TA\SeisT\logs\2025-03-19_14-04-09_seist_s_dpk_obspy\tensorboard' --port 8080

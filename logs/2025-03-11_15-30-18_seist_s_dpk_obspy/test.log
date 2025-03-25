@@ -1,0 +1,6 @@
+2025-03-11 15:30:18,570:test:WARNING:[test]Augmentation -> False
+2025-03-11 15:30:18,576:test:INFO:Data Split: test: 29-33
+2025-03-11 15:30:18,576:test:INFO:Dataset(name:obspy, part_range:None, channels:['z', 'n', 'e'], sampling_rate:20, data_dir:C:\Users\Intel X Nvidia\Desktop\TA\SeisT\datasets, shuffle:True, data_split:True, train_size:0.8, val_size:0.1)
+2025-03-11 15:30:18,723:test:INFO:Model loaded: C:\Users\Intel X Nvidia\Desktop\TA\SeisT\pretrained\seist_s_dpk_diting.pth
+2025-03-11 15:30:18,780:test:INFO:model.load_state_dict
+2025-03-11 15:30:18,782:test:INFO:Model parameters: 125717

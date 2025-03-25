@@ -181,12 +181,17 @@ def get_args():
 
 def main_worker(args, device):
 
+
     log_dir = (
         os.path.join(args.log_base, f"{get_time_str()}_{args.model_name}_{args.dataset_name}")
-        if not args.checkpoint
-        else args.checkpoint.split("checkpoints")[0]
+        # if not args.checkpoint
+        # else args.checkpoint.split("checkpoints")[0]
     )
+
+    print(torch.cuda.is_available())
+
     logger.set_logdir(log_dir)
+    print(log_dir)
     logger.set_logger("global")
     
     if is_main_process():

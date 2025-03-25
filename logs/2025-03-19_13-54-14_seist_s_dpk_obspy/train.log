@@ -1,0 +1,6 @@
+2025-03-19 13:54:14,953:train:INFO:Registering ObsPy dataset...
+2025-03-19 13:54:14,972:train:WARNING:Data augmentation: Dataset size -> 200
+2025-03-19 13:54:14,972:train:WARNING:[val]Augmentation -> False
+2025-03-19 13:54:14,972:train:INFO:Registering ObsPy dataset...
+2025-03-19 13:54:14,979:train:INFO:train size: 200, val size:100
+2025-03-19 13:54:14,980:train:WARNING:`args.epochs` -> 200, `args.steps` -> 40000

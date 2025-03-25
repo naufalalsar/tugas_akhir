@@ -1,0 +1,10 @@
+2025-03-25 15:04:19,808:train:INFO:Registering ObsPy dataset with HDF5 support...
+2025-03-25 15:04:19,823:train:WARNING:Data augmentation: Dataset size -> 2492
+2025-03-25 15:04:19,824:train:WARNING:[val]Augmentation -> False
+2025-03-25 15:04:19,824:train:INFO:Registering ObsPy dataset with HDF5 support...
+2025-03-25 15:04:19,829:train:INFO:train size: 2492, val size:1246
+2025-03-25 15:04:19,830:train:WARNING:`args.epochs` -> 10, `args.steps` -> 50
+2025-03-25 15:04:20,005:train:INFO:Model loaded: C:\Users\Intel X Nvidia\Desktop\TA\SeisT\pretrained\seist_s_dpk_diting.pth
+2025-03-25 15:04:20,094:train:INFO:model.load_state_dict
+2025-03-25 15:04:20,108:train:INFO:Model parameters: 125717
+2025-03-25 15:05:18,652:train:INFO:Train: [0/10][0/5]seist_s_dpk_train  [DET]precision 0.0000 (0.0000)  [DET]recall 0.0000 (0.0000)  [DET]f1 0.0000 (0.0000)  [PPK]precision 0.0000 (0.0000)  [PPK]recall 0.0000 (0.0000)  [PPK]f1 0.0000 (0.0000)  [PPK]mean 0.0000 (0.0000)  [PPK]std 0.0000 (0.0000)  [PPK]mae 0.0000 (0.0000)  [PPK]mape 0.0000 (0.0000)  [SPK]precision 0.0000 (0.0000)  [SPK]recall 0.0000 (0.0000)  [SPK]f1 0.0000 (0.0000)  [SPK]mean 0.0000 (0.0000)  [SPK]std 0.0000 (0.0000)  [SPK]mae 0.0000 (0.0000)  [SPK]mape 0.0000 (0.0000)  Loss 0.1078 (0.1078)

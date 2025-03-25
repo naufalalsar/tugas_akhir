@@ -157,16 +157,19 @@ class DataPreprocessor:
         """
         Determine noise data
         """
+
         is_noise = (
             (len(ppks) != len(spks))
             or len(ppks) < 1
             or len(spks) < 1
             or min(ppks + spks) < 0
             or max(ppks + spks) >= data.shape[-1]
-            or all(snr < self.min_snr)
+            or (snr if isinstance(snr, np.ndarray) else np.array(snr, dtype=np.float32) < self.min_snr).all()
         )
-        for i in range(len(ppks)):
+
+        for i in range(min(len(ppks), len(spks))):  # Prevent IndexError
             is_noise |= ppks[i] >= spks[i]
+
         return is_noise
 
     def _cut_window(
@@ -225,6 +228,7 @@ class DataPreprocessor:
         """
         Normalize waveform of each sample. (inplace)
         """
+
         data -= np.mean(data, axis=1, keepdims=True)
         if mode == "max":
             max_data = np.max(data, axis=1, keepdims=True)
@@ -870,7 +874,6 @@ class SeismicDataset(Dataset):
             train_size=args.train_size,
             val_size=args.val_size,
         )
-        logger.info(self._dataset)
 
         self._dataset_size = len(self._dataset)
 
